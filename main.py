@@ -25,7 +25,7 @@ def draw_lsystem(t, instructions, angle):
     step_length = 5
     total_steps = len(instructions)
 
-    turtle.tracer(0, 0)  # Disable animation for performance
+    turtle.tracer(0, 0)  
 
     for i, cmd in enumerate(instructions):
         # Gradient color effect
@@ -46,12 +46,12 @@ def draw_lsystem(t, instructions, angle):
             t.setheading(heading)
             t.pendown()
 
-    turtle.update()  # Refresh screen once
+    turtle.update()  
 
 
-# ---------------------------------
+
 # Generate Button Callback
-# ---------------------------------
+
 def generate():
     """
     Reads user input, expands L-system, and draws it.
@@ -76,10 +76,8 @@ def generate():
     final_string = expand_lsystem(axiom, rules, iterations)
     draw_lsystem(t, final_string, angle)
 
-
-# ---------------------------------
 # Tkinter GUI Setup
-# ---------------------------------
+
 root = tk.Tk()
 root.title("L-System Fractal Architect")
 root.geometry("1000x700")
@@ -123,3 +121,4 @@ t.speed(0)
 t.hideturtle()
 
 root.mainloop()
+
